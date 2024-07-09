@@ -17,6 +17,7 @@
   src: url("../fonts/ptsans-700.woff2")format("woff2");
   font-display: swap;
 }
+
 body {
   margin: 0 auto;
   font-size: 18px;
@@ -25,8 +26,9 @@ body {
   font-style: normal;
   font-family: "PT Sans", "Arial", sans-serif;
   color: #000000;
-  background-color: #f2f2f2;
-  width: 1200px;
+  background-color: #F2F2F2;
+  width: 1280px;
+  padding: 0 40px 0 40px;
 }
 
 .list-reset{
@@ -42,15 +44,10 @@ list-style: none;
   margin: -1px;
   padding: 0;
   border: 0;
-  white-space: 0;
+/*   white-space: 0; */
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
 }
 
 .navigation-link,
@@ -67,7 +64,6 @@ a {
   list-style: none;
 }
 
-
 .header-button{
   background-color: #756157;
   color: white;
@@ -79,30 +75,8 @@ a {
   text-transform: uppercase;
   font-size: 16px;
   border: none;
-}
-
-.navigation-list a:hover,
-.navigation-item a:focus,
-.navigation-user a:hover,
-.navigation-user-item a:focus {
-  position: relative;
-}
-
-.navigation-link:before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: #000;
-  left: 0;
-  bottom: 0;
-  transition: .5s;
-  transform: scale(0);
-  transform-origin: center;
-}
-
-.navigation-link:hover:before {
-  transform: scale(1);
+  margin: 0;
+  padding: 0;
 }
 
 .page-header {
@@ -117,7 +91,7 @@ a {
   margin: 0;
   padding: 0;
   display: flex;
-  min-height: 64px;
+  height: 64px;
 }
 
 .navigation-logo {
@@ -133,7 +107,6 @@ a {
   min-width: 339px;
   list-style: none;
   margin: 0;
-  /* padding: 0 285px 0 32px; */
   padding: 0 auto 0 32px;
 }
 
@@ -146,6 +119,7 @@ a {
   display: flex;
   margin: 0;
   padding: 20px 16px;
+  color: inherit;
 }
 
 .navigation-link-current {
@@ -155,28 +129,36 @@ a {
 }
 
 .navigation-user {
-  display: flex;
-  /* margin: 20px 70px 20px 285px; */
   padding: 0;
-  padding-left: 200px;
+  margin: 0;
 }
 
 .navigation-user-item {
+  margin: 14px 0 14px 285px;
+  padding: 0;
 }
+
 .navigation-user-link {
+  padding: 0;
+  margin: 0;
 }
 
 .navigation-user-link-favorite {
   width: 20px;
   height: 20px;
-  background-image: url("../images/catalog/heart_favorite.png");
-  background-repeat: no-repeat no-repeat;
+  background-image: url("../images/catalog/vector_heart_favorite.svg");
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
 }
+
 .navigation-user-link-search {
   width: 20px;
   height: 20px;
-  background-image: url("../images/search.svg");
-  background-repeat: no-repeat no-repeat;
+  background-image: url("../images/catalog/vector_search.svg");
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
 }
 
 .notification-number {
@@ -205,27 +187,30 @@ a {
   background-repeat: no-repeat,no-repeat,no-repeat;
   background-position: center bottom, center center;
 }
-/*
-.hero-main-picture-divider {
-  background-image: url("../images/divider.png");
-  min-width: 1200px;
-  min-height: 486px;
-  background-position: center bottom;
-  background-repeat: no-repeat;
-}
 
-.hero {
+/* .hero::after {
   background-image: url("../images/welcome_to_sedona.svg");
   min-width: 1200px;
   min-height: 486px;
-  background-position: center;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
-.hero-main-picture {
+.hero-main-picture::before {
+  min-width: 1200px;
+  min-height: 486px;
   background-image: url("../images/welcome.jpg");
   background-repeat: no-repeat;
   background-position: center;
+  z-index: ;
+}
+
+.hero-main-picture-divider {
+  min-width: 1200px;
+  min-height: 486px;
+  background-image: url("../images/divider.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
 } */
 
 .lead {
@@ -251,12 +236,14 @@ a {
 }
 
 .advantages-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  margin-top: 21px;
+  margin-bottom: 64px;
   padding: 0;
   list-style: none;
 }
+
 
 .advantages-item {
   margin: 0;
@@ -265,7 +252,7 @@ a {
 
 .advantages-light {
   background-color: rgba(131, 179, 211, 0.12);
-  display: row;
+
   min-width: 400px;
   min-height: 385px;
 }
@@ -285,7 +272,9 @@ a {
 }
 
 .advantages-item-wide {
+  grid-column: 1 / -1;
   display: flex;
+  flex-wrap: wrap;
   background-color: #82B3D3;
 }
 
@@ -296,7 +285,7 @@ a {
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
-  padding: 102px 112.5px 0 112.5px;
+  padding-bottom: 62px;
 }
 
 .advantages-description-with-picture {
@@ -309,21 +298,17 @@ a {
 }
 
 .advantages-wrapper {
-  min-width: 230px;
-  min-height: 81px;
+  margin: 102px 85px 102px 85px;
+  padding: 0;
+  width: 230px;
+  height: 181px;
 }
 
-.rectangle {
-  margin: 30px 170px 30px 170px;
-  width: 60px;
-  height: 2px;
-  background: #82B3D3;
-}
-.rectangle-white {
-  margin: 30px 170px 30px 170px;
-  width: 60px;
-  height: 2px;
-  background: #ffffff;
+.infrastructure-wrapper {
+  width: 230px;
+  height: 223px;
+  margin: 0;
+  padding: 0;
 }
 
 .advantages-title {
@@ -331,10 +316,8 @@ a {
   line-height: 28px;
   color: white;
   font-weight: 700;
-  display: flex;
-  justify-content: center;
   text-transform: uppercase;
-  padding: 112.5px 85px 0 85px;
+  padding-bottom: 62px;
   margin: 0;
 }
 
@@ -397,7 +380,6 @@ a {
 .infrastructure-item {
   width: 400px;
   min-height: 385px;
-
 }
 
 .infrastructure-item-home {
@@ -406,13 +388,8 @@ a {
   min-height: 72px;
   padding: 0;
   margin: 0;
-/*position: absolute;     вариант не работает
-  top: 81px;
-  bottom: 232px;
-  left: 162.5px;
-  right: 162.5px; */
   background-repeat: no-repeat;
-  background-position: center center, center center;
+  background-position: 50% 25%;
 }
 
 .infrastructure-item-food {
@@ -420,7 +397,7 @@ a {
   min-width: 75px;
   min-height: 72px;
   background-repeat: no-repeat;
-  background-position: center center, center center;
+  background-position: 50% 25%;
 }
 
 .infrastructure-item-souvenir {
@@ -428,7 +405,7 @@ a {
   min-width: 75px;
   min-height: 72px;
   background-repeat: no-repeat;
-  background-position: center center, center center;
+  background-position: 50% 25%;
 }
 
 .infrastructure-title {
@@ -548,6 +525,7 @@ a {
 .page-footer {
   display: flex;
   justify-content: space-around;
+  align-items: center;
   flex-wrap: wrap;
   background-color: white;
   padding: 40px 70px 30px 70px;
@@ -582,13 +560,14 @@ a {
   margin-left: 236px;
   font-size: 40px;
   line-height: 40px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .placeholder-form {
   border-radius: 4px 0 0 4px;
   border: none;
   min-width: 452px;
-
   font-size: 18px;
   font-weight: 400;
   line-height: 24px;
@@ -597,27 +576,8 @@ a {
   padding-right: 342px;
   padding-top: 14px;
   padding-bottom: 14px;
+  background-color: #F2F2F2;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -626,8 +586,6 @@ a {
 .main-catalog {
   background-color: #ffffff;
 }
-
-/* гостиница седона инфраструктура тип жилья инпуты чекбоксы */
 
 .hotels-filter {
   display: flex;
@@ -659,8 +617,6 @@ a {
 .breadcrumbs-list {
   display: inline-flex;
   flex-wrap: wrap;
- /*  width: 114px;
-  min-height: 21px; */
   margin: 0;
   padding: 0;
   list-style: none;
@@ -675,6 +631,7 @@ a {
   font-weight: 400;
   min-width: 6.39px;
   min-height: 9.94px;
+  text-decoration: none;
 }
 
 .breadcrumbs-link{
@@ -683,6 +640,7 @@ a {
   color: #ffffff;
   min-width: 12px;
   min-height: 12px;
+  text-decoration: none;
 }
 
 .hotels-filter-group {
@@ -732,17 +690,10 @@ a {
 .control {
 }
 
-/* .control-input{
-  list-style-type: none;
-  color: orange;
-  background-color: black;
-} */
-
-
 .price-filter-group {
   display: flex;
   flex-wrap: wrap;
-  width: 549px;
+  width: 288px;
   min-height: 160px;
   margin: 0;
   padding: 0;
@@ -796,8 +747,9 @@ a {
   height: 20px;
 }
 
-.block-for-button {   /* правильно ли такое центрование ? */
-  margin: -48px 0 0 70px;
+.block-for-button {
+  margin-top: 56px;
+  margin-left: 70px;
   padding: 0;
   width: 191px;
   height: 104px;
@@ -837,12 +789,6 @@ a {
   text-align: center;
 }
 
-/* конец первого меню */
-
-/* КНОПКИ */
-
-
-
 .all-subject{
   display: flex;
   flex-wrap: wrap;
@@ -852,7 +798,7 @@ a {
 
 .catalog-card {
   display: grid;
-  grid-template-columns: repeat(3, 340px);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   list-style-type: none;
   margin: 40px 70px 80px 70px;
@@ -870,7 +816,6 @@ a {
   min-height: 49px;
   margin: 50px 70px 40px 70px;
   padding: 0;
-
 }
 
 .catalog-card-title {
@@ -892,7 +837,6 @@ a {
   border-radius: 4px;
   margin: 0;
   padding: 14px 20px 14px 20px;
-
 }
 
 /* .all-cards {
@@ -904,43 +848,31 @@ a {
 } */
 
 .catalog-card-list {
-  /* display: grid; */
+  display: grid;
   gap: 20px;
   margin: 0;
   padding: 0;
   list-style: none;
+
 }
 
+
 .catalog-card-item {
-/*   display: grid;
-  grid-template-columns: repeat(2, 1fr); */
-  display: flex;
-  flex-wrap: wrap;
-
-
-  margin: 0;
-  padding: 0;
+  display: grid;
+  gap: 16px 20px;
+  grid-template-columns: repeat(2, 140px);
+  padding: 20px;
   width: 340px;
-  height: 438px;
   border: 1px solid #E6E6E6;
   border-radius: 4px;
 }
+
 .catalog-card-amara-img {
-  margin: 16px 20px 0 20px;
 }
-/* .catalog-card-amara-img,
-.catalog-card-title-link,
-.catalog-card-description,
-.price-from,
-.more-details,
-.favorites,
-.four-stars,
-.rating {
-} */
 
 .catalog-card-title-link {
-  /* padding: 0; */
-  padding: 16px 20px 0 20px;
+  grid-column: 1 / -1;
+  padding: 0;
   margin: 0;
   font-size: 24px;
   font-weight: 700;
@@ -948,7 +880,7 @@ a {
 }
 
 .catalog-card-description {
-  padding: 16px 0 0 20px;
+  padding: 0;
   margin: 0;
   font-size: 18px;
   font-weight: 400;
@@ -956,8 +888,9 @@ a {
 }
 
 .price-from {
+  text-align: right;
   margin: 0;
-  padding: 16px 20px 0 140px;
+  padding: 0;
 }
 
 .more-details {
@@ -972,7 +905,7 @@ a {
   line-height: 20px;
   font-weight: 700;
   text-align: center;
-  margin: 16px 20px 0 20px;
+  margin: 0;
   padding: 0;
   cursor: pointer;
 }
@@ -989,7 +922,7 @@ a {
   line-height: 20px;
   font-weight: 700;
   text-align: center;
-  margin: 16px 0 0 0;
+  margin: 0;
   padding: 0;
   cursor: pointer;
 }
@@ -1006,7 +939,7 @@ a {
   line-height: 20px;
   font-weight: 700;
   text-align: center;
-  margin: 16px 0 0 0;
+  margin: 0;
   padding: 0;
   cursor: pointer;
 }
@@ -1016,7 +949,7 @@ a {
   background-repeat: repeat-x;
   width: 140px;
   height: 37px;
-  margin: 16px 20px 16px 20px;
+  margin: 0;
   padding: 0;
 }
 
@@ -1033,7 +966,7 @@ a {
   line-height: 20px;
   font-weight: 400;
   text-transform: uppercase;
-  margin: 16px 0 0 0;
+  margin: 0;
   padding: 0;
 }
 
@@ -1045,8 +978,6 @@ a {
   color: #ffffff;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(32px, min-content));
-/*   display: flex;
-  flex-wrap: wrap; */
   margin: 80px 70px 60px 70px;
   padding: 0;
   gap: 8px;
@@ -1073,6 +1004,8 @@ a {
   min-width: 60px;
   min-height: 60px;
   border-radius: 4px;
+  text-decoration: none;
+  color: inherit;
 }
 
 .pagination-item-clear {
@@ -1106,3 +1039,29 @@ a {
   padding-top: 14px;
   padding-bottom: 14px;
 }
+
+
+
+/* .navigation-list a:hover,
+.navigation-item a:focus,
+.navigation-user a:hover,
+.navigation-user-item a:focus {
+  position: relative;
+} */
+
+/* .navigation-link:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: #000;
+  left: 0;
+  bottom: 0;
+  transition: .5s;
+  transform: scale(0);
+  transform-origin: center;
+} */
+
+/* .navigation-link:hover:before {
+  transform: scale(1);
+} */
