@@ -129,7 +129,7 @@ body {
 }
 
 .navigation-item {
-  margin: 0;
+  margin-top: 1px;
   padding: 0;
 }
 
@@ -150,7 +150,7 @@ position: relative;
 .navigation-link-current {
   text-decoration: underline solid #756257;
   text-decoration-thickness: 2px;
-  text-underline-offset: 20px;
+  text-underline-offset: 24px;
 }
 
 
@@ -219,7 +219,7 @@ position: relative;
 }
 
 .lead {
-  margin: 64px 0 20px 0;
+  margin: 65px 0 25px 0;
   padding: 0;
   font-size: 30px;
   font-weight: 700;
@@ -243,8 +243,8 @@ position: relative;
 .advantages-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 21px;
-  margin-bottom: 64px;
+/*   margin-top: 21px;
+  margin-bottom: 64px; */
   padding: 0;
   list-style: none;
 }
@@ -264,7 +264,6 @@ position: relative;
 
 .advantages-dark-accent {
   background-color: rgba(131, 179, 211, 0.20);
-  display: row;
   min-width: 400px;
   min-height: 385px;
 }
@@ -281,6 +280,16 @@ position: relative;
   display: flex;
   flex-wrap: wrap;
   background-color: #82B3D3;
+  margin-top: 21px;
+}
+
+.advantages-item-wide-two {
+  grid-column: 1 / -1;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #82B3D3;
+  margin-top: 0;
+
 }
 
 .advantages-title-with-picture {
@@ -335,6 +344,7 @@ position: relative;
 
 .advantages-title-cube {
   color: #000000;
+  padding-top: 10px;
 }
 
 .advantages-description-cube {
@@ -394,7 +404,7 @@ position: relative;
   padding: 0;
   margin: 0;
   background-repeat: no-repeat;
-  background-position: 50% 25%;
+  background-position: 50% 26%;
 }
 
 .infrastructure-item-food {
@@ -402,7 +412,7 @@ position: relative;
   min-width: 75px;
   min-height: 72px;
   background-repeat: no-repeat;
-  background-position: 50% 25%;
+  background-position: 50% 26%;
 }
 
 .infrastructure-item-souvenir {
@@ -410,7 +420,7 @@ position: relative;
   min-width: 75px;
   min-height: 72px;
   background-repeat: no-repeat;
-  background-position: 50% 25%;
+  background-position: 50% 26%;
 }
 
 .infrastructure-title {
@@ -436,7 +446,8 @@ position: relative;
 }
 
 .search-title {
-  margin: 0;
+  margin-bottom: 20px;
+  margin-top: 0;
   padding: 0;
   text-transform: uppercase;
   line-height: 36px;
@@ -444,14 +455,15 @@ position: relative;
 }
 
 .search-description {
-  margin-top: 20px 0 0 0;
-  padding: 0;
+  margin: 0;
+  padding-bottom: 54px;
+  padding-top: 0;
   font-size: 22px;
   line-height: 26px;
 }
 
 .search-button {
-  margin-top: 54px;
+  margin: 0;
   padding: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-weight: 700;
@@ -560,7 +572,7 @@ position: relative;
   align-items: center;
   flex-wrap: wrap;
   background-color: white;
-  padding: 40px 70px 30px 70px;
+  padding: 45px 70px 30px 70px;
 }
 
 .footer-social-list {
@@ -576,8 +588,9 @@ position: relative;
 .footer-social-item {
   width: 47.33px;
   height: 40px;
-  margin: 0;
+  margin: 3px 1px 0 0;
   padding: 0;
+
 }
 
 .footer-social-link {
@@ -602,7 +615,7 @@ position: relative;
 
 .icon-footer {
   display: flex;
-  margin: 13px 11.67px 13px;
+  margin: 9px 12px 0;
   cursor: pointer;
   text-decoration: none;
 }
@@ -629,7 +642,7 @@ position: relative;
 }
 
 .footer-logo-link-academy {
-  margin-bottom: -5px;
+  margin-top: -1px;
   padding: 0;
   text-decoration: none;
 }
@@ -664,6 +677,7 @@ position: relative;
 .footer-phone {
   margin-right: 236px;
   margin-left: 236px;
+  margin-top: 0;
   font-size: 40px;
   line-height: 40px;
   text-decoration: none;
@@ -692,9 +706,10 @@ position: relative;
   color: #000000;
   padding-left: 20px;
   padding-right: 342px;
-  padding-top: 14px;
+  padding-top: 15px;
   padding-bottom: 14px;
   background-color: #F2F2F2;
+  font-family: "PT Sans", "Arial", sans-serif;
 }
 
 
@@ -714,14 +729,15 @@ position: relative;
 }
 
 .hotels-filter-picture {
-  background-image: url("../images/catalog/background_image_catalog_blur.jpg");
+  background-image: url("../images/catalog/background_image_catalog_blur2.png");
   width: 1200px;
-  height: 409px;
+  height: 412px;
 }
 
 .for-tittle-and-breabcrumbs {
   width: 1060px;
   height: 107px;
+  margin-bottom: 40px;
 }
 
 .inner-title {
@@ -735,7 +751,7 @@ position: relative;
 .breadcrumbs-list {
   display: inline-flex;
   flex-wrap: wrap;
-  margin: 0;
+  margin-top: 8px;
   padding: 0;
   list-style: none;
   justify-content: left;
@@ -751,13 +767,15 @@ position: relative;
   min-width: 6.39px;
   min-height: 9.94px;
   text-decoration: none;
-  margin: 0;
+  margin-top: 0;
 }
 
 .breadcrumbs-item-two {
   margin-left: 10px;
   text-decoration: none;
   color: #ffffff;
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .breadcrumbs-link {
@@ -862,14 +880,15 @@ position: relative;
   line-height: 23px;
   font-weight: 400;
   cursor: pointer;
+  margin-left: 11px;
 }
 
 .control:hover .control-mark {
   outline: 3px solid #83B3D3;
 }
 
-.control:focus .control-mark {
-  /* outline: 3px solid #83B3D3; */
+.control-input:focus + .control-mark {
+  outline: 3px solid #83B3D3;
 }
 
 .control:hover .control-mark {
@@ -885,8 +904,7 @@ position: relative;
 }
 
 .control-label:active {
-  border: 1px solid #83B3D3;  /* не меняет толщуну бордера !! */
-  opacity: 30%;
+  outline: 2px solid #83B3D3;
 }
 
 .control-input:disabled + .control-mark {
@@ -1011,7 +1029,7 @@ position: relative;
   border: none;
   width: 143px;
   height: 48px;
-  padding: 12px 0 12px 20px;
+  padding: 12px 0 12px 21px;
   font-family: "PT Sans", "Arial", sans-serif;
   outline: none;
 }
@@ -1049,7 +1067,7 @@ position: relative;
   height: 4px;
   width: 287px;
   margin-bottom: 20px;
-  background-color: white;
+  background-color: green;
   border-radius: 2px;
   margin: 0;
   padding: 0;
@@ -1058,6 +1076,7 @@ position: relative;
 
 .range-bar {
   position: relative;
+  margin-top: -4px;
   height: 4px;
   background-color: white;
 
@@ -1074,22 +1093,22 @@ position: relative;
 }
 
 .range-toggle:hover {
-  background-color: #68A2CA;
+  opacity: 75%;
 }
 
 .range-toggle:active,
 .range-toggle:focus {
-  outline: 2px solid white;
+  outline: 3px solid #83B3D3;
 }
 
 .toggle-min {
   top: -8px;
-  right: 82px;
+  left: 0;
 }
 
 .toggle-max {
   top: -8px;
-  right: -135px;
+  right: 0;
 }
 /* проба рейндж */
 
@@ -1193,12 +1212,13 @@ position: relative;
 .catalog-card-title {
   padding: 0;
   padding-right: 200px;
-  margin: 0;
+  margin-top: 25px;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
   display: flex;
   align-items: center;
+  text-transform: uppercase;
 }
 
 
@@ -1258,9 +1278,11 @@ position: relative;
   color: #333333;
   border: 2px solid #E5E5E5;
   border-radius: 4px;
-  margin: 0;
-  padding: 14px 20px 14px 20px;
+  margin-right: 70px;
+  margin-top: 0;
+  padding: 11px 20px 14px 15px;
   cursor: pointer;
+  font-family: "PT Sans", "Arial", sans-serif;
 }
 
 .catalog-card-select:hover {
@@ -1288,6 +1310,7 @@ position: relative;
   grid-template-columns: repeat(2, 140px);
   padding: 20px;
   width: 340px;
+  min-height: 438px;
   border: 1px solid #E6E6E6;
   border-radius: 4px;
 }
@@ -1297,7 +1320,7 @@ position: relative;
 .catalog-card-title-link {
   grid-column: 1 / -1;
   padding: 0;
-  margin: 0;
+  margin: -2px 0 0 0;
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
@@ -1313,7 +1336,7 @@ position: relative;
 
 .price {
   text-align: right;
-  margin: 0;
+  margin: 0 1px -3px 0;
   padding: 0;
   position: relative;
   font-family: "PT Sans", sans-serif;
@@ -1339,7 +1362,7 @@ position: relative;
   position: absolute;
   right: 20px;
   left: 106px;
-  top: 12px;
+  top: 15px;
   bottom: 12px;
   color: #000000;
   line-height: 20px;
@@ -1350,8 +1373,8 @@ position: relative;
   content:"до";
   position: absolute;
   right: 20px;
-  left: 106px;
-  top: 12px;
+  left: 105px;
+  top: 15px;
   bottom: 12px;
   color: #000000;
   line-height: 20px;
@@ -1501,7 +1524,7 @@ position: relative;
   font-weight: 400;
   text-transform: uppercase;
   margin: 0;
-  padding: 0;
+  padding-top: 3px;
 }
 
 fieldset {
@@ -1600,6 +1623,7 @@ fieldset {
   padding-right: 342px;
   padding-top: 14px;
   padding-bottom: 14px;
+  font-family: "PT Sans", sans-serif;
 }
 
 
@@ -1728,6 +1752,7 @@ fieldset {
   position: relative;
   background-image: url("../images/catalog/calendar.svg");
   background-repeat: no-repeat;
+  background-position: center right 22px;
 }
 
 /* .field {
